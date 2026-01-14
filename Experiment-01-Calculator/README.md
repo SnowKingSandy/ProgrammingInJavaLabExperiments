@@ -1,23 +1,41 @@
-# Experiment 01: Calculator (Phase 2 - Full Logic / Unsafe)
+# Experiment 01: Calculator
 
-**Status:** ⚠️ Functional but Unsafe (No Exception Handling)
+**Status:** ✅ Completed
 
 ## 📝 Description
-Version 2 completes the arithmetic logic. The application can now perform Addition, Subtraction, Multiplication, Division, and Modulo. 
 
-**Note:** This version does **not** handle runtime errors. Dividing by zero may result in `Infinity` or program crashes.
+A menu-driven calculator that performs basic arithmetic operations. This project demonstrates modular programming using methods and error handling with `try-catch` blocks.
 
-## ✅ Implemented Features
-* **All Math Operations:** Methods added for `multiplyNums`, `divideNums`, and `calcMod`.
-* **Full Menu Integration:** The switch statement now handles all 5 cases.
+## ✨ Features
 
-## ⚠️ Known Issues
-* **Division by Zero:** There is no check if the second number is 0. 
-* **Input Validation:** Non-integer inputs inside the number prompt will still crash the program.
+- **Modular design:** Separate methods for each arithmetic operation.
+- **Error handling:** Guards against division or modulo-by-zero.
+- **Interactive loop:** Allows continuous calculations until the user exits.
 
-## 🔜 Coming Next (Final Version)
-* [ ] Add `try-catch` blocks to handle `ArithmeticException`.
-* [ ] Add custom error messages for Division by Zero.
+## 🚀 How to run
+
+```bash
+javac Calculator.java
+java Calculator
+```
+
+Notes:
+
+- If the experiment contains multiple source files, compile them with `javac *.java`.
+- For JavaFX examples, run from an IDE or ensure JavaFX is on the classpath.
+
+Maintained by SnowKingSandy
+# Experiment 01: Calculator (Final)
+
+**Status:** ✅ Completed
+
+## 📝 Description
+A Menu-Driven Calculator that performs basic arithmetic operations. This project demonstrates modular programming using methods and robust error handling using `try-catch` blocks.
+
+## ✨ Features
+* **Modular Design:** Separate methods for each arithmetic operation.
+* **Error Handling:** Prevents crashes during Division or Modulo by Zero.
+* **User Loop:** Allows continuous calculation without restarting the program.
 
 ## 🚀 How to Run
 ```bash
