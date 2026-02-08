@@ -121,4 +121,9 @@ public class Vehicle {
     public void displayDetails() {
         System.out.println("Vehicle: " + brandName + " " + modelName + " (" + fuelType + ")");
     }
+
+    public void printTableRow() {
+        System.out.printf("| %-15s | %-15s | %-10s | %8.0f | %6.1f | %c | %4d | %12s |%n", 
+            brandName, modelName, color, price, fuelCapacity, fuelType, noOfSeats, vinNumber);
+    }
 }
