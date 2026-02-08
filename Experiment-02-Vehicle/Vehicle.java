@@ -73,6 +73,51 @@ public class Vehicle {
     public void setVinNumber(String vinNumber) { this.vinNumber = vinNumber; }
     public double getMileage() { return mileage; }
 
+    public void start() {
+        System.out.println("Starting vehicle...");
+        this.curSpeed = 20; 
+        System.out.println("Initial Speed: " + curSpeed + " kmph");
+    }
+
+    public void drive() {
+        System.out.println("Driving the " + brandName + " " + modelName);
+    }
+
+    public int accelerate(int increaseBy) {
+        this.curSpeed += increaseBy;
+        System.out.println("Speeding up. Current speed: " + this.curSpeed + " kmph");
+        return this.curSpeed;
+    }
+
+    public void changeSpeed(int newSpeed) {
+        if (newSpeed < 0) {
+            System.out.println("Speed cannot be negative!");
+            return;
+        }
+        this.curSpeed = newSpeed;
+        System.out.println("Speed changed to: " + this.curSpeed + " kmph");
+    }
+
+    public void stop() {
+        this.curSpeed = 0;
+        System.out.println("Vehicle stopped.");
+    }
+
+    public float calcMileage(float distance, float fuelAmt) {
+        if (fuelAmt <= 0) return 0;
+        
+        float result = distance / fuelAmt;
+        this.mileage = result; 
+        char type = Character.toUpperCase(this.fuelType);
+
+        if (type == 'E') {
+            System.out.println("   [EV System] Calculating Energy Efficiency: " + result + " km/kWh");
+        } else {
+            System.out.println("   [Engine System] Calculating Fuel Economy: " + result + " km/L");
+        }
+        return result;
+    }
+
     public void displayDetails() {
         System.out.println("Vehicle: " + brandName + " " + modelName + " (" + fuelType + ")");
     }

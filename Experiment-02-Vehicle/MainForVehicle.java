@@ -22,5 +22,11 @@ public class MainForVehicle {
         v1.displayDetails();
         v2.displayDetails();
         v3.displayDetails();
+
+        System.out.println("\nTesting behavior on v1:");
+        v1.start();
+        v1.accelerate(30);
+        v1.calcMileage(100, 5);
+        v1.stop();
     }
 }
