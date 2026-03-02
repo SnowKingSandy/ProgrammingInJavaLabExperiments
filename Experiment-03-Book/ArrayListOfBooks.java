@@ -21,12 +21,10 @@ public class ArrayListOfBooks {
             b4 = new Book("Harry Potter", 25.99, "978-073475", "fiction", "J.K. Rowling");
             library.add(b4);
 
-            // Try to create a book with negative price
-            System.out.println("\nAttempting to create a book with negative price...");
             try {
-                Book invalidBook = new Book("Invalid Book", -50.0, "978-999999", "fiction", "Anonymous");
+                Book testBook = new Book("Test Item", -50.0, "978-999999", "fiction", "Anonymous");
             } catch (InvalidPriceException e) {
-                System.out.println("Caught Exception: " + e.getMessage());
+                System.out.println("Error - " + e.getMessage());
             }
 
         } catch (InvalidGenreException | InvalidPriceException e) {
@@ -39,37 +37,35 @@ public class ArrayListOfBooks {
             if (library.isEmpty()) {
                 System.out.println("The library is currently empty.");
             } else {
-                System.out.println("\nAll Books in Library:");
+                System.out.println("\nBooks Added:");
                 for (Book b : library) {
                     System.out.println(b.title + " | " + b.author + " | $" + b.price);
                 }
 
-                System.out.println("\nTotal Books: " + library.size());
+                System.out.println("Total: " + library.size() + " books");
                 
                 if (b2 != null) {
-                    System.out.println("Is 'The Alchemist' in the list? " + library.contains(b2));
+                    System.out.println("Contains 'The Alchemist': " + library.contains(b2));
                 }
 
-                // Calculate average price
                 double sum = 0;
                 for (Book b : library) {
                     sum = sum + b.price;
                 }
 
                 double average = sum / library.size();
-                System.out.println("\nPrice Details:");
+                System.out.println("\nBook Prices:");
                 for (Book b : library) {
-                    System.out.println(b.title + " | Price: $" + b.price);
+                    System.out.println(b.title + " - $" + b.price);
                 }
 
-                System.out.println("\nTotal Sum: $" + sum);
-                System.out.println("Average Price: $" + String.format("%.2f", average));
+                System.out.println("\nSum: $" + sum);
+                System.out.println("Average: $" + String.format("%.2f", average));
 
-                // Print Fiction books using forEach
-                System.out.println("\n--- Fiction Books ---");
+                System.out.println("\nFiction:");
                 library.forEach(book -> {
                     if (book.genre.equalsIgnoreCase("fiction")) {
-                        System.out.println(book.title + " by " + book.author + " ($" + book.price + ")");
+                        System.out.println("  " + book.title + " by " + book.author);
                     }
                 });
             }
