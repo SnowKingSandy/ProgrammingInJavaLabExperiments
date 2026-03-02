@@ -21,4 +21,31 @@ public class Vector {
             throw new DimensionMismatchException("Dimension Mismatch: Vectors must be of the same size.");
         }
     }
+
+    public static Vector add(Vector v1, Vector v2) throws DimensionMismatchException, InvalidVectorSizeException {
+        checkDimensions(v1, v2);
+        double[] result = new double[v1.components.length];
+        for (int i = 0; i < v1.components.length; i++) {
+            result[i] = v1.components[i] + v2.components[i];
+        }
+        return new Vector(result);
+    }
+
+    public static Vector subtract(Vector v1, Vector v2) throws DimensionMismatchException, InvalidVectorSizeException {
+        checkDimensions(v1, v2);
+        double[] result = new double[v1.components.length];
+        for (int i = 0; i < v1.components.length; i++) {
+            result[i] = v1.components[i] - v2.components[i];
+        }
+        return new Vector(result);
+    }
+
+    public static double dotProduct(Vector v1, Vector v2) throws DimensionMismatchException {
+        checkDimensions(v1, v2);
+        double product = 0;
+        for (int i = 0; i < v1.components.length; i++) {
+            product += (v1.components[i] * v2.components[i]);
+        }
+        return product;
+    }
 }
