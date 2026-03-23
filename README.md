@@ -10,7 +10,7 @@ Welcome to the Programming Logic with Java lab repository for Semester IV. This 
 | **02** | [Vehicle Management System](./Experiment-02-Vehicle) | Constructors, encapsulation, arrays, methods | ✅ Completed |
 | **03** | [Book Management System](./Experiment-03-Book) | Custom exceptions, ArrayList, inheritance | ✅ Completed |
 | **04** | [Vector Operations](./Experiment-04-Vector) | Static methods, exception handling, validation | ✅ Completed |
-| **05** | [Banking Application](./Experiment-05-Banking) | Inheritance, polymorphism | ⏳ Pending |
+| **05** | [Banking Application](./Experiment-05-Banking) | Inheritance, polymorphism, abstraction, encapsulation | ✅ Completed |
 | **06** | [Employee Payroll](./Experiment-06-Payroll) | Multilevel & hierarchical inheritance | ⏳ Pending |
 | **07** | [Student Record Manager](./Experiment-07-StudentFile) | File handling (I/O), CRUD | ⏳ Pending |
 | **08** | [Collections & Patterns](./Experiment-08-Collections) | Java Collections Framework | ⏳ Pending |
