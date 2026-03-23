@@ -3,6 +3,7 @@ import java.util.*;
 public class BankingApplication {
     private static List<Customer> customers = new ArrayList<>();
     private static int accNumberCounter = 1000;
+    private static int custIdCounter = 100;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -28,6 +29,9 @@ public class BankingApplication {
                     manageAccounts(scanner);
                     break;
                 case 4:
+                    viewAllCustomers();
+                    break;
+                case 5:
                     System.out.println("Thank you for using Banking Application!");
                     running = false;
                     break;
@@ -43,7 +47,8 @@ public class BankingApplication {
         System.out.println("1. Create New Customer");
         System.out.println("2. View Customer Details");
         System.out.println("3. Manage Accounts");
-        System.out.println("4. Exit");
+        System.out.println("4. View All Customers");
+        System.out.println("5. Exit");
     }
 
     private static void createCustomer(Scanner scanner) {
@@ -55,7 +60,7 @@ public class BankingApplication {
         System.out.print("Enter Phone: ");
         String phone = scanner.nextLine().trim();
 
-        String custId = "CUST" + generateId();
+        String custId = "CUST" + (++custIdCounter);
         Customer customer = new Customer(custId, name, email, phone);
         customers.add(customer);
 
@@ -382,7 +387,15 @@ public class BankingApplication {
         }
     }
 
-    private static int generateId() {
-        return (int) (Math.random() * 10000);
+    private static void viewAllCustomers() {
+        if (customers.isEmpty()) {
+            System.out.println("\nNo customers found.");
+        } else {
+            System.out.println("\n--- ALL CUSTOMERS ---");
+            for (Customer cust : customers) {
+                cust.displayConsolidatedInfo();
+                System.out.println("---");
+            }
+        }
     }
 }
