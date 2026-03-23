@@ -1,0 +1,23 @@
+# Compiled Java files
+*.class
+*.jar
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Gradle/Maven
+target/
+build/
+*.gradle
+
+# Temp files
+*.tmp
+*.log
