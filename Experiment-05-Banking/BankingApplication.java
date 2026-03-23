@@ -3,15 +3,18 @@ import java.util.*;
 public class BankingApplication {
     private static List<Customer> customers = new ArrayList<>();
     private static int accNumberCounter = 1000;
-    private static int custIdCounter = 100;
+    private static int custIdCounter = 103;  // After sample data (CUST101-103)
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
         System.out.println("========================================");
-        System.out.println("  WELCOME TO BANKING APPLICATION v1.0  ");
+        System.out.println("  WELCOME TO BANKING APPLICATION v2.0  ");
         System.out.println("========================================\n");
+
+        // Load sample data for demo
+        loadSampleData();
 
         while (running) {
             displayMenu();
@@ -49,6 +52,30 @@ public class BankingApplication {
         System.out.println("3. Manage Accounts");
         System.out.println("4. View All Customers");
         System.out.println("5. Exit");
+    }
+
+    private static void loadSampleData() {
+        // Create sample customers with multiple accounts
+        Customer cust1 = new Customer("CUST101", "Raj Kumar", "raj@email.com", "9876543210");
+        Customer cust2 = new Customer("CUST102", "Priya Singh", "priya@email.com", "9876543211");
+        Customer cust3 = new Customer("CUST103", "Amit Patel", "amit@email.com", "9876543212");
+
+        // Add accounts to customers
+        cust1.addAccount(new SavingsAccount("SAV001", 25000));
+        cust1.addAccount(new CurrentAccount("CUR001", 50000));
+        cust1.addAccount(new LoanAccount("LOAN001", "Personal", 200000, 12.5, 60));
+
+        cust2.addAccount(new SavingsAccount("SAV002", 15000));
+        cust2.addAccount(new FDAccount("FD001", 100000, 7.5, 12));
+
+        cust3.addAccount(new CurrentAccount("CUR002", 75000));
+        cust3.addAccount(new LoanAccount("LOAN002", "Home", 5000000, 8.5, 240));
+
+        customers.add(cust1);
+        customers.add(cust2);
+        customers.add(cust3);
+
+        System.out.println("✓ Sample data loaded successfully!\n");
     }
 
     private static void createCustomer(Scanner scanner) {
