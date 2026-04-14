@@ -1,0 +1,4 @@
+database.properties
+*.class
+*.jar
+.DS_Store
