@@ -14,7 +14,7 @@ Welcome to the Programming Logic with Java lab repository for Semester IV. This 
 | **06** | [Employee Payroll](./Experiment-06-Payroll) | Multilevel inheritance, polymorphism, menu-driven | ✅ Completed |
 | **07** | [Student Record Manager](./Experiment-07-StudentRecords) | File I/O, CRUD operations, CSV handling | ✅ Completed |
 | **08** | [Collections & Patterns](./Experiment-08-Collections) | Java Collections Framework | ⏳ Pending |
-| **09** | [JDBC Database App](./Experiment-09-JDBC) | JDBC, database connectivity | ⏳ Pending |
+| **09** | [JDBC Database App](./Experiment-09-JDBC) | JDBC, database connectivity, secure config | ✅ Completed |
 | **10** | [JavaFX Application](./Experiment-10-JavaFX) | GUI controls, event handling | ⏳ Pending |
 
 ## 🛠️ Tech Stack
