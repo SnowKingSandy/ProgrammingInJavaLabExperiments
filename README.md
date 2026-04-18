@@ -13,9 +13,9 @@ Welcome to the Programming Logic with Java lab repository for Semester IV. This 
 | **05** | [Banking Application](./Experiment-05-Banking) | Inheritance, polymorphism, abstraction, encapsulation | ✅ Completed |
 | **06** | [Employee Payroll](./Experiment-06-Payroll) | Multilevel inheritance, polymorphism, menu-driven | ✅ Completed |
 | **07** | [Student Record Manager](./Experiment-07-StudentRecords) | File I/O, CRUD operations, CSV handling | ✅ Completed |
-| **08** | [Collections & Patterns](./Experiment-08-Collections) | Java Collections Framework | ⏳ Pending |
+| **08** | [Inventory Management](./Experiment-08-DesignPatterns) | Design patterns - Singleton, Adapter, Iterator | ✅ Completed |
 | **09** | [JDBC Database App](./Experiment-09-JDBC) | JDBC, database connectivity, secure config | ✅ Completed |
-| **10** | [JavaFX Application](./Experiment-10-JavaFX) | GUI controls, event handling | ⏳ Pending |
+| **10** | [JavaFX JDBC App](./Experiment-10-JavaFX) | JavaFX GUI, JDBC CRUD operations | ✅ Completed |
 
 ## 🛠️ Tech Stack
 
