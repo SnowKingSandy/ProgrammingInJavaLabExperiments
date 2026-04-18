@@ -104,6 +104,70 @@ Total products in inventory: 6
 - ✅ Hides collection internal structure
 - ✅ Supports multiple simultaneous iterations
 
+## Test Cases
+
+The experiment includes 5 comprehensive test cases demonstrating each design pattern:
+
+### 1. **TestSingleton.java**
+Tests the Singleton pattern:
+- Creates two InventoryManager instances
+- Verifies they have the same reference (hash code)
+- Confirms shared state across references
+```bash
+java TestSingleton
+```
+**Output:** Shows identical memory references and shared data
+
+### 2. **TestAdapter.java**
+Tests the Adapter pattern:
+- Creates a LegacyItem directly
+- Wraps it with ProductAdapter
+- Compares output from both interfaces
+```bash
+java TestAdapter
+```
+**Output:** Both direct and adapted methods produce identical output
+
+### 3. **TestIterator.java**
+Tests the Iterator pattern:
+- Adds 3 products to inventory (mixed types)
+- Uses Iterator to traverse the collection
+- Displays each product sequentially
+```bash
+java TestIterator
+```
+**Output:** Shows all 3 products traversed in order
+
+### 4. **TestMixed.java**
+Tests polymorphic handling:
+- Creates 5 products (mix of NewProduct and adapted LegacyItems)
+- Stores in ArrayList as Product interface type
+- Polymorphically displays all products
+```bash
+java TestMixed
+```
+**Output:** Shows all 5 products handled correctly
+
+### 5. **TestPolymorphism.java**
+Tests interface polymorphism:
+- Creates ArrayList of Product types
+- Adds NewProduct and ProductAdapter instances
+- Demonstrates runtime polymorphic behavior
+```bash
+java TestPolymorphism
+```
+**Output:** Shows type information and details for each product
+
+### Running All Tests
+```bash
+javac *.java
+java TestSingleton
+java TestAdapter
+java TestIterator
+java TestMixed
+java TestPolymorphism
+```
+
 ## Learning Outcomes
 - ✅ Understanding Singleton pattern implementation
 - ✅ Using Adapter pattern for interface compatibility
