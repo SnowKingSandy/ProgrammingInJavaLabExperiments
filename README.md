@@ -28,7 +28,7 @@ Welcome to the Programming Logic with Java lab repository for Semester IV. This 
 Use the commands below from a terminal (PowerShell, Command Prompt, or Bash). Replace `Experiment-01-Calculator` with the experiment folder you want to run.
 
 ```bash
-git clone https://github.com/SnowKingSandy/ProgrammingInJavaLabExperiments.git
+git clone https://github.com/SarvAce/ProgrammingInJavaLabExperiments.git
 cd ProgrammingInJavaLabExperiments/Experiment-01-Calculator
 javac Calculator.java
 java Calculator
@@ -40,4 +40,4 @@ Notes:
 
 ---
 
-Maintained by SnowKingSandy
+Maintained by SarvAce
